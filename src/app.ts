@@ -11,7 +11,8 @@ const clearSymbols = () => {
 
 const displayResult = (value: string) => {
   resultsTile.innerHTML = "";
-  if (value === "") {
+  if(value === ''){
+    return
   }
 
   result = eval(value);
@@ -25,6 +26,6 @@ numbers.forEach((number) => {
 });
 operators.forEach((operator) => {
   operator.addEventListener("click", (e) =>
-    displaySymbols(e, displayResult, clearSymbols, resultsTile)
+    displaySymbols(e, displayResult, clearSymbols,  resultsTile)
   );
 });

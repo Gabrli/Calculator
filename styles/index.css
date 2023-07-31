@@ -1,63 +1,61 @@
-body{
-    margin: 0;
-    padding: 0;
-    
+body {
+  margin: 0;
+  padding: 0;
 }
-.main-container{
-    width: 100%;
-    height: 100vh;
-    background-color: #f5f5f5;
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.calculator-container {
+  width: 337px;
+  height: 593px;
+  border-radius: 10px;
+  background-color: #fff;
 
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.calculator-container{
-    width: 400px;
-    height: 82%;
-    border-radius: 10px;
-    background-color: #fff;
- 
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.calculator-container header {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.calculator-container header{
-    width: 100%;
-    height: 100px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.symbols-and-numbers-container {
+  padding: 0px 0%;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+
+  position: relative;
+  top: 100px;
+  
 }
-.symbols-and-numbers-container{
-    padding: 0px 0%;
-    display: grid;
-   grid-template-columns:  1fr 1fr 1fr 1fr;
-   grid-row-gap: 8px;
-   grid-column-gap: 8px; 
-   
-    position: relative;
-    top: 100px;
+.symbols-and-numbers-container button {
+  height: 60px;
+  border: 0;
+
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
-.symbols-and-numbers-container button{
-    height: 60px;
-    border: 0;
-   
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-   
+.btn {
+  background-color: #fff;
 }
-.btn{
-    background-color: #fff;
+.operators {
+  background-color: royalblue;
 }
-.operators{
-    background-color: royalblue;
-}
-#equel{
-    height: 100%;
+#equel {
+  height: 100%;
   grid-row-start: 6;
   grid-row-end: 2;
 }
-#clear{
-    background-color: royalblue;
+#clear {
+  background-color: royalblue;
 }

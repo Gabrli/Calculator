@@ -8,7 +8,8 @@ const clearSymbols = () => {
 };
 const displayResult = (value) => {
     resultsTile.innerHTML = "";
-    if (value === "") {
+    if (value === '') {
+        return;
     }
     result = eval(value);
     resultsTile.innerHTML = result;
