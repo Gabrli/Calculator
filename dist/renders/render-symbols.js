@@ -4,7 +4,7 @@ const displaySymbols = (e, displayResult, clearSymbols, resultsTile) => {
     const target = e.target;
     let updateValue;
     if (target.innerHTML === "2^") {
-        updateValue = resultsTile.innerHTML += target.innerHTML = "**";
+        updateValue = resultsTile.innerHTML += "**";
     }
     else {
         updateValue = resultsTile.innerHTML += target.innerHTML;

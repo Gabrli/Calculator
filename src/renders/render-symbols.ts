@@ -12,7 +12,7 @@ const displaySymbols = (
 
   let updateValue: string;
   if (target.innerHTML === "2^") {
-    updateValue = resultsTile.innerHTML += target.innerHTML = "**";
+    updateValue = resultsTile.innerHTML += "**";
   } else {
     updateValue = resultsTile.innerHTML += target.innerHTML;
   }
