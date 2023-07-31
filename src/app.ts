@@ -1,20 +1,9 @@
+import displaySymbols from "./renders/render-symbols.js";
 const numbers: NodeList = document.querySelectorAll(".btn");
 const operators: NodeList = document.querySelectorAll(".operators");
 const resultsTile: HTMLElement = document.querySelector(".results");
 
-let result = "";
-const displaySymbols = (e: Event) => {
-  const resultBtn: HTMLElement = document.querySelector("#equel");
-  const clearBtn: HTMLElement = document.querySelector("#clear");
-  const delateBtn: HTMLElement = document.querySelector("#delate");
-  const target = e.target as HTMLButtonElement;
-  let updateValue: string = (resultsTile.innerHTML += target.innerHTML);
-
-  resultBtn.addEventListener("click", () => displayResult(updateValue));
-  clearBtn.addEventListener("click", clearSymbols);
-  delateBtn.addEventListener("click", () => {});
-  console.log(delateBtn);
-};
+let result: string;
 
 const clearSymbols = () => {
   resultsTile.innerHTML = "";
@@ -23,7 +12,6 @@ const clearSymbols = () => {
 const displayResult = (value: string) => {
   resultsTile.innerHTML = "";
   if (value === "") {
-    return;
   }
 
   result = eval(value);
@@ -31,8 +19,12 @@ const displayResult = (value: string) => {
 };
 
 numbers.forEach((number) => {
-  number.addEventListener("click", displaySymbols);
+  number.addEventListener("click", (e) =>
+    displaySymbols(e, displayResult, clearSymbols, resultsTile)
+  );
 });
 operators.forEach((operator) => {
-  operator.addEventListener("click", displaySymbols);
+  operator.addEventListener("click", (e) =>
+    displaySymbols(e, displayResult, clearSymbols, resultsTile)
+  );
 });
