@@ -1,7 +1,7 @@
 import displaySymbols from "./renders/render-symbols.js";
 const numbers: NodeList = document.querySelectorAll(".btn");
 const operators: NodeList = document.querySelectorAll(".operators");
-const resultsTile: HTMLElement = document.querySelector(".results");
+const resultsTile: HTMLElement = document.querySelector(".results p");
 
 let result: string;
 
@@ -11,8 +11,8 @@ const clearSymbols = () => {
 
 const displayResult = (value: string) => {
   resultsTile.innerHTML = "";
-  if(value === ''){
-    return
+  if (value === "") {
+    return;
   }
 
   result = eval(value);
@@ -26,6 +26,6 @@ numbers.forEach((number) => {
 });
 operators.forEach((operator) => {
   operator.addEventListener("click", (e) =>
-    displaySymbols(e, displayResult, clearSymbols,  resultsTile)
+    displaySymbols(e, displayResult, clearSymbols, resultsTile)
   );
 });

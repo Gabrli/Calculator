@@ -8,7 +8,7 @@ const displaySymbols = (
   const resultBtn: HTMLElement = document.querySelector("#equel");
   const clearBtn: HTMLElement = document.querySelector("#clear");
 
-  const target = e.target as HTMLButtonElement;
+  const target = e.target as HTMLElement;
 
   let updateValue: string;
   if (target.innerHTML === "2^") {

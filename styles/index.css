@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 .main-container {
   width: 100%;
@@ -24,6 +25,14 @@ body {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: start;
+}
+.calculator-container header p{
+  font-size: 33px;
+  letter-spacing: 1px;
+  position: relative;
+  top: 35px;
+  left: 10px;
 }
 .symbols-and-numbers-container {
   padding: 0px 0%;
@@ -42,20 +51,33 @@ body {
 
   font-weight: bold;
   font-size: 20px;
-  color: black;
+
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 .btn {
   background-color: #fff;
+  color: black;
 }
 .operators {
-  background-color: royalblue;
+  background-color: black;
+  color: #fff;
 }
 #equel {
+  transition: .2s ease-in-out;
   height: 100%;
   grid-row-start: 6;
   grid-row-end: 2;
 }
 #clear {
-  background-color: royalblue;
+  background-color: black;
+}
+#clear:hover{
+  transition: .2s ease-in-out;
+  background-color: #f5f5f5;
+  color: black;
+}
+.operators:hover{
+  transition: .2s ease-in-out;
+  background-color: whitesmoke;
+  color: black;
 }

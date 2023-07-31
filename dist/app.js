@@ -1,14 +1,14 @@
 import displaySymbols from "./renders/render-symbols.js";
 const numbers = document.querySelectorAll(".btn");
 const operators = document.querySelectorAll(".operators");
-const resultsTile = document.querySelector(".results");
+const resultsTile = document.querySelector(".results p");
 let result;
 const clearSymbols = () => {
     resultsTile.innerHTML = "";
 };
 const displayResult = (value) => {
     resultsTile.innerHTML = "";
-    if (value === '') {
+    if (value === "") {
         return;
     }
     result = eval(value);
